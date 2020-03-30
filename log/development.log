@@ -110,3 +110,22 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 0.9ms)
 
 
+Started POST "/posts" for 23.119.203.21 at 2020-03-30 23:35:05 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gnh/AScd5nlrKHTWvkz80buVmxiYaRkAa0SF8/KAOzb9hh2EkFORMevSRIMaW1gGMO6Gryli3Fe6HkEIfBbapQ==", "title"=>"Loys Post", "description"=>"Still Nothing to post", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Loys Post"], ["description", "Still Nothing to post"], ["created_at", "2020-03-30 23:35:05.945766"], ["updated_at", "2020-03-30 23:35:05.945766"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://142.93.56.73:34231/posts/3
+Completed 302 Found in 5ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/3" for 23.119.203.21 at 2020-03-30 23:35:06 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
