@@ -73,3 +73,10 @@ No template found for PostsController#create, rendering head :no_content
 Completed 204 No Content in 76ms (ActiveRecord: 5.2ms)
 
 
+Started GET "/posts/new" for 23.119.203.21 at 2020-03-30 23:30:58 +0000
+  
+SyntaxError (/home/effective-listener-5997/rails-create-action-readme-onl01-seng-pt-110319/app/controllers/posts_controller.rb:21: syntax error, unexpected end, expecting ')'
+  end
+  ^~~):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end, expecting ')'
